@@ -17,14 +17,19 @@ public class StartDriverSession {
     public void setUp() throws Exception
     {
         ChromeOptions caps = new ChromeOptions();
-        caps.setCapability("appium:platformName", "Android");
-        caps.setCapability("appium:automationName", "uiautomator2");
+        caps.setCapability("appium:platformName", "iOS");
+        caps.setCapability("appium:deviceName", "iPhone 6");
+        caps.setCapability("appium:automationName", "XCUITest");
         caps.setCapability("appium:udid", "emulator-5554");
         String appPath = System.getProperty("user.dir") 
             + File.separator 
-            + "Downloads"
+            + "src"
             + File.separator
-            + "ApiDemos-debug.apk";
+            + "test"
+            + File.separator
+            + "resources"
+            + File.separator
+            + "UIKitCatalog-iphonesimulator.app";
         Reporter.log( "APP PATH: " + appPath, true );
         caps.setCapability("app", appPath);
 
