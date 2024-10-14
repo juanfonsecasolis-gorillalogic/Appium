@@ -11,7 +11,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import dev.failsafe.internal.util.Assert;
 
-public class StartDriverSession {
+public class Tests {
     
     AppiumDriver appiumDriver;
 
