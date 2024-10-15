@@ -42,17 +42,17 @@ public class Tests {
 
     @AfterMethod()
     public void tearDown(){
-        appiumDriver.close();
+        appiumDriver.quit();
     }
 
     @Test
     public void SimpleTest() throws InterruptedException
     {
-        WebElement myElement = 
-            appiumDriver.findElement(
-                AppiumBy.accessibilityId(
-                    "Activity Indicators"));
-        Assert.assertEquals(myElement.getText(),"123");
+        WebElement activityIndicatorElement =
+            appiumDriver.findElement(AppiumBy.accessibilityId(
+                "Activity Indicators"
+            ));
+        Assert.assertEquals(activityIndicatorElement.getText(),"Activity Indicators");
     }
 
 }
