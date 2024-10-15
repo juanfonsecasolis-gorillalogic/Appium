@@ -21,6 +21,7 @@ Solution to exercises of Omprakash Chavan's course https://gorillalogic.udemy.co
 * [UIKitCatalog](https://github.com/appium/ios-uicatalog) 
     * Download the ZIP with the code. 
     * Run `cd UIKitCatalog; npm install`.
+    * The app will be in the build/Release-iphonesimulator folder.
 
 ![](./img/UIKitCatalog.png)
 
