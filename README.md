@@ -1,19 +1,31 @@
 # Appium
 
-2024 Juan M. Fonseca-Solís @ GorillaLogic
+2024 Juan M. Fonseca-Solís @ GorillaLogic.
 
 ## Description
-Exercises of Omprakash Chavan's course https://gorillalogic.udemy.com/course/the-complete-appium-course-for-ios-and-android.
+Solution to exercises of Omprakash Chavan's course https://gorillalogic.udemy.com/course/the-complete-appium-course-for-ios-and-android.
 
-## Setup
-1. Get the iOS udid: `xcrun simctl list | grep Booted`.
+## Requirements
+* [Node.Js](https://nodejs.org/en) (required by Appium).
+* Appium Server: `sudo npm install -g appium@next` (g stands for global).
+* XCUITest driver: `sudo appium driver install xcuitest`.
+* [Appium Inspector](https://github.com/appium/appium-inspector) (for inspecting the layout and build the locators).
 
-## App
-* [UIKitCatalog](https://github.com/appium/ios-uicatalog) built using `npm install`.
+## Simulator
+* macOS 14.2 os later.
+* [xCode 15.2](https://developer.apple.com/downloads/?name=Xcode).
+* iOS 17.2 (install from the Simulator).
+* iOS udid: `xcrun simctl list | grep Booted`.
+
+## Sample app for practicing automation
+* [UIKitCatalog](https://github.com/appium/ios-uicatalog) 
+    * Download the ZIP with the code. 
+    * Run `cd UIKitCatalog; npm install`.
 
 ![](./img/UIKitCatalog.png)
 
-## Versions
-* xCode 15.2
-* iOS 17.2
-* macOS 14.2
+## Run
+```
+appium;
+sudo appium driver install xcuitest;
+```
