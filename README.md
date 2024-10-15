@@ -13,8 +13,8 @@ Solution to exercises of Omprakash Chavan's course https://gorillalogic.udemy.co
 
 ## Simulator
 * macOS 14.2 os later.
-* [xCode 15.2](https://developer.apple.com/downloads/?name=Xcode).
-* iOS 17.2 (install from the Simulator).
+* [XCode 15.2](https://developer.apple.com/downloads/?name=Xcode).
+* iOS 17.2 (install from XCode > Settings > Components).
 * iOS udid: `xcrun simctl list | grep Booted`.
 
 ## Sample app for practicing automation
