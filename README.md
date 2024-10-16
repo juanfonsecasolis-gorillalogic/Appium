@@ -55,5 +55,17 @@ sudo appium driver install xcuitest;
 | Hybrid | Native app that renders HTML/CSS/JS | Shorter | Slow | Poor | Hard (it is tricky to access embedded content) |
 | Mobile Web | Full HTML/CSS/JS | Shorter | Slow (download time) | Poor | Easy |  
 
+## iOS locator strategies [1]
+
+| Strategy | Nature | Tradeoff | Example |
+| --- | --- | --- | --- |
+| Accessibility ID | Reliable & fast | Developer must set is explicitly (otherwise it becomes the 'name' attribute). | - | 
+| iOS Predicates | Fast | Requires casting driver as "FindByIosNSPredicate" | tableViews()[1].cells().firstWithPredicate("label == 'Olivia'") |
+| iOS Class Chain | Faster than XPath, slower than iOS Predicates | Requires casting driver as "FindsByIosClassChain" | XCUIElementTypeWindow['label BEINGSWITH "foo"'][-1] | 
+| Class name | - | - | XCUIElementTypeStaticText |
+| ID | - | Developer must set is explicitly (otherwise it becomes the 'name' attribute). | any value | 
+| Name | - | - | any value | 
+| XPath | Unreliable & slow (specially in iOS) | - | //XCUIElementType<element_type>[@atribute='value']/<axes>::<expressions> |
+
 ## References
 1. Omprakash Chavan. Appium Mobile Automation - Android & iOS + Frameworks + CICD. URL: https://gorillalogic.udemy.com/course/the-complete-appium-course-for-ios-and-android (last consulted on Oct 15th 2024).
