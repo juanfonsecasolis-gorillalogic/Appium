@@ -1,12 +1,12 @@
-package com.appium;
+package com.appium.Tests;
 
 import org.openqa.selenium.WebElement;
 import io.appium.java_client.AppiumBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Tests extends TestBase{
-
+public class Tests extends TestBase
+{
     @Test
     public void SimpleTest() throws InterruptedException
     {

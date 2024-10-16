@@ -1,4 +1,4 @@
-package com.appium;
+package com.appium.Helpers;
 
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Reporter;
