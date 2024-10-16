@@ -8,6 +8,7 @@ import io.appium.java_client.AppiumBy;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -38,21 +39,33 @@ public class Tests {
         appiumDriver = new IOSDriver(
             new URL("http://127.0.0.1:4723/"), 
             caps);
+
+        Reporter.log("Session ID: " + appiumDriver.getSessionId());
     }
 
     @AfterMethod()
-    public void tearDown(){
+    public void tearDown() throws Exception{
+        Thread.sleep(10000);
         appiumDriver.quit();
     }
 
     @Test
     public void SimpleTest() throws InterruptedException
     {
+        // assert component text
         WebElement activityIndicatorElement =
             appiumDriver.findElement(AppiumBy.accessibilityId(
                 "Activity Indicators"
             ));
         Assert.assertEquals(activityIndicatorElement.getText(),"Activity Indicators");
+    
+        // click component and verify the Activity Indicators page opens
+        activityIndicatorElement.click();
+        WebElement pageHeaderElement =
+            appiumDriver.findElement(AppiumBy.className(
+                "XCUIElementTypeStaticText"
+            ));
+        Assert.assertEquals(pageHeaderElement.getText(), "Activity Indicators");
     }
 
 }
