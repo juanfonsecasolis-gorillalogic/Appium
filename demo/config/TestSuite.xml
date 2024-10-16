@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Test">
-    <test name="Test">
+<suite name="AllTests">
+    <test name="FirstSetOfTests">
         <classes>
-            <class name="com.appium.Tests"/>
+            <class name="com.appium.Tests.FirstSetOfTests"/>
         </classes>
     </test>
 </suite>
