@@ -59,7 +59,7 @@ sudo appium driver install xcuitest;
 
 | Strategy | Nature | Tradeoff | Example |
 | --- | --- | --- | --- |
-| Accessibility ID | Reliable & fast | Developer must set is explicitly (otherwise it becomes the 'name' attribute). | - | 
+| Accessibility ID | Reliable & fast | Developer must set is explicitly (otherwise it becomes the 'name' attribute) and only works in native applications. | - | 
 | iOS Predicates | Fast | Requires casting driver as "FindByIosNSPredicate" | tableViews()[1].cells().firstWithPredicate("label == 'Olivia'") |
 | iOS Class Chain | Faster than XPath, slower than iOS Predicates | Requires casting driver as "FindsByIosClassChain" | XCUIElementTypeWindow['label BEINGSWITH "foo"'][-1] | 
 | Class name | - | - | XCUIElementTypeStaticText |
