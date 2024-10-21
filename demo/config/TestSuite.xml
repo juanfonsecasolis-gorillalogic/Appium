@@ -3,6 +3,7 @@
     <test name="FirstSetOfTests">
         <classes>
             <class name="com.appium.Tests.FirstSetOfTests"/>
+            <class name="com.appium.Tests.GestureTests"/>
         </classes>
     </test>
 </suite>

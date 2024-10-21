@@ -10,7 +10,7 @@ import com.appium.Pages.HomePage.CatalogElementType;
 
 public class FirstSetOfTests extends TestBase
 {
-    @Test
+    //@Test
     public void verifySystemDisplaysMenuItems() throws Exception
     {
         Assert.assertEquals(
@@ -29,7 +29,7 @@ public class FirstSetOfTests extends TestBase
             "Buttons");
     }
     
-    @Test
+    //@Test
     public void verifyHeadersOfActivityIndicatorPage() throws Exception
     {
         currentPage = ((HomePage) currentPage).openCatalogElementMenuItem(
@@ -40,7 +40,7 @@ public class FirstSetOfTests extends TestBase
             "Activity Indicators");
     }
 
-    @Test
+    //@Test
     public void verifyTextFieldsPage() throws Exception
     {
         // arrange

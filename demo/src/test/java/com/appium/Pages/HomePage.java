@@ -14,7 +14,7 @@ public class HomePage extends PageBase
     {
         ActivityIndicators, 
         AlertViews, 
-        Buttons, TextFields
+        Buttons, TextFields, WebView
     }
 
     @FindBy(xpath = "//XCUIElementTypeStaticText[@name=\"Buttons\"]")
@@ -47,6 +47,8 @@ public class HomePage extends PageBase
                 return buttonsMenuElement;  // xpath
             case TextFields:
                 return appiumDriver.findElement(AppiumBy.accessibilityId("Text Fields"));
+            case WebView:
+                return appiumDriver.findElement(AppiumBy.accessibilityId("Web View"));
             default:
                 throw new Exception("Unknown type " + catalogElementType);
         }
@@ -55,12 +57,18 @@ public class HomePage extends PageBase
     public PageBase openCatalogElementMenuItem(
         CatalogElementType catalogElementType) throws Exception 
     {
-        getCatalogElementMenuItem(catalogElementType).click();
+        
         switch (catalogElementType) {
             case ActivityIndicators:
+                getCatalogElementMenuItem(catalogElementType).click();
                 return new ActivityIndicatorsPage(appiumDriver);    
             case TextFields:
+                getCatalogElementMenuItem(catalogElementType).click();
                 return new TextFieldsPage(appiumDriver);
+            case WebView:
+                gesturesManager.scroll();
+                getCatalogElementMenuItem(catalogElementType).click();
+                return new WebViewPage(appiumDriver);
             default:
                 throw new Exception("Not implemented" + catalogElementType);
         }    
